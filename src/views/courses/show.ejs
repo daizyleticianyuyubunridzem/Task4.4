@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= course.courseName %></title>
+</head>
+<body>
+
+    <h1><%= course.courseName %></h1>
+    <p><strong>Description:</strong> <%= course.description %></p>
+    <p><strong>Duration:</strong> <%= course.duration %> weeks</p>
+    <p><strong>Instructor:</strong> <%= course.instructor %></p>
+    <p><strong>Maximum Students:</strong> <%= course.maxStudents %></p>
+
+    <a href="/courses">Back to Courses</a>
+    <form action="/courses/<%= course._id %>/delete" method="POST">
+        <button type="submit">Delete Course</button>
+    </form>
+
+</body>
+</html>
