@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Catalogue</title>
+</head>
+<body>
+
+    <h1>Course Catalogue</h1>
+
+    <% if (courses.length === 0) { %>
+        <p>No courses available.</p>
+    <% } else { %>
+        <% courses.forEach(course => { %>
+            <div>
+                <h2><%= course.courseName %></h2>
+                <p><%= course.description %></p>
+                <p>Duration: <%= course.duration %> weeks</p>
+                <p>Instructor: <%= course.instructor %></p>
+                <p>Maximum students: <%= course.maxStudents %></p>
+            </div>
+        <% }) %>
+    <% } %>
+</body>
+</html>
