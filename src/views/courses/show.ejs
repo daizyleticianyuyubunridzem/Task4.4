@@ -1,13 +1,16 @@
-<%- include('../partials/header', {'title: Course.courseName'}) %>
+<%- include('../partials/header', { title: course.courseName }) %>
 
     <h1><%= course.courseName %></h1>
     <p><strong>Description:</strong> <%= course.description %></p>
     <p><strong>Duration:</strong> <%= course.duration %> weeks</p>
     <p><strong>Instructor:</strong> <%= course.instructor %></p>
     <p><strong>Maximum Students:</strong> <%= course.maxStudents %></p>
-
+    
+    <a href="/courses/<%= course._id %>/edit">Edit Course</a>
     <a href="/courses">Back to Courses</a>
-    <form action="/courses/<%= course._id %>/delete" method="POST">
+    
+    <form action="/courses/<%= course._id %>/delete" method="POST" 
+         onsubmit="return confirm('Are you sure you want to delete this course?');" >
         <button type="submit">Delete Course</button>
     </form>
 
