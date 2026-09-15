@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Course</title>
-</head>
-<body>
+<%- include('../partials/header', { title: 'Edit Course' }) %>
     <h1>Edit Course</h1>
     <form action="/courses/<%= course._id %>/edit" method="POST">
         <div>
@@ -64,6 +57,4 @@
         <button type="submit">Update Course</button>
     </form>
     <a href="/courses">Cancel</a>
-</body>
-</html>
-
+<%- include('../partials/footer') %>
