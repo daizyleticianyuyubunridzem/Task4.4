@@ -1,0 +1,2 @@
+Complete Integration Application: Build a new server-rendered application for managing a course catalogue (course name, description, duration in weeks, instructor, maximum students). The application must: use the full MVC structure from the start; include full CRUD; 
+use Mongoose with validation; handle errors centrally; use EJS with partials; follow the PRG pattern on all form submissions; have a minimum of ten meaningful Git commits on a feature branch merged into main.
